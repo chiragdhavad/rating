@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo rating</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="feed.js"></script>
+
+<script type="text/javascript">
+    
+    function togglePopup() {
+        $(".content").toggle();
+    }
+</script>
+<script>
+    $(document).ready(function () {
+
+        $("#st1").click(function () {
+            $(".fa-star").css("color", "black");
+            $("#st1").css("color", "goldenrod");
+
+        });
+        $("#st2").click(function () {
+            $(".fa-star").css("color", "black");
+            $("#st1, #st2").css("color", "goldenrod");
+
+        });
+        $("#st3").click(function () {
+            $(".fa-star").css("color", "black")
+            $("#st1, #st2, #st3").css("color", "goldenrod");
+
+        });
+        $("#st4").click(function () {
+            $(".fa-star").css("color", "black");
+            $("#st1, #st2, #st3, #st4").css("color", "goldenrod");
+
+        });
+        $("#st5").click(function () {
+            $(".fa-star").css("color", "black");
+            $("#st1, #st2, #st3, #st4, #st5").css("color", "goldenrod");
+
+        });
+    });  
+</script>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="photo/logo.png" alt="" height="50px" width="80px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            animal Photo's
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Lion</a></li>
+                            <li><a class="dropdown-item" href="#">Tiger</a></li>
+                            <li><a class="dropdown-item" href="#">Fox</a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    Wolf</a></li>
+                            <li><a class="dropdown-item" href="#">Dog</a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    Cat</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <hr>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="photo/L2.avif" height="550px" width="500px" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="photo/tiger.jpg" height="550px" width="500px" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="photo/wolf.avif" height="550px" width="500px" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="photo/L2.avif" alt="Card image cap" height="300px">
+                <div class="card-body">
+                    <h5 class="card-title">Lion</h5><br>
+
+<button onclick=" togglePopup()">Rate This Photo</button>
+                    
+                  
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="photo/tiger.jpg" alt="Card image cap" height="300px">
+                <div class="card-body">
+                    <h5 class="card-title">Tiger</h5><br>
+
+
+                 <button onclick=" togglePopup()">Rate This Photo</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="photo/wolf.avif" alt="Card image cap" height="300px">
+                <div class="card-body">
+                    <h5 class="card-title">Wolf</h5><br>
+
+
+                    <button onclick=" togglePopup()">Rate This Photo</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="photo/cheeta.avif" alt="Card image cap" height="300px">
+                <div class="card-body">
+                    <h5 class="card-title">cheeta</h5><br>
+
+
+                    <button onclick=" togglePopup()">Rate This Photo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="photo/dog.jpg" alt="Card image cap" height="300px">
+                <div class="card-body">
+                    <h5 class="card-title">Dog</h5><br>
+
+                    <button onclick=" togglePopup()">Rate This Photo</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="photo/cat.jpg" alt="Card image cap" height="300px">
+                <div class="card-body">
+                    <h5 class="card-title">Cat</h5><br>
+
+
+                    <button onclick=" togglePopup()">Rate This Photo</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="photo/bull.jpg" alt="Card image cap" height="300px">
+                <div class="card-body">
+                    <h5 class="card-title">Bull</h5><br>
+
+                    <button onclick=" togglePopup()">Rate This Photo</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="photo/cow.jpg" alt="Card image cap" height="300px">
+                <div class="card-body">
+                    <h5 class="card-title">Cow</h5><br>
+
+
+                    <button onclick=" togglePopup()">Rate This Photo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div onclick="togglePopup()" class="close-btn">
+           <h1> ×</h1>
+        </div>
+   
+            <div class="pop">    
+
+        <h1>Rate Us</h1>
+    
+
+                <div class="container">
+
+                    <div class="con">
+
+                        <i class="fa fa-star" aria-hidden="true" id="st1" onclick="st1()"></i>
+                        <i class="fa fa-star" aria-hidden="true" id="st2" onclick="st2()"></i>
+                        <i class="fa fa-star" aria-hidden="true" id="st3" onclick="st3()"></i>
+                        <i class="fa fa-star" aria-hidden="true" id="st4" onclick="st4()"></i>
+                        <i class="fa fa-star" aria-hidden="true" id="st5" onclick="st5()"></i>
+                    </div>
+                </div><br>
+
+                <b>Feedback : </b><input type="text" id="feedback" placeholder="Your Feedback">
+
+        <br>    <br>    <b style="margin-left: 25px;">E-mail : </b><input type="text" placeholder="Enter Your E-mail" id="mail"   
+           ><br><br>
+
+                <a href="#" class="btn btn-primary" onclick="feedback()">submit</a>
+
+  
+        <p>
+      
+        </p>
+    </div>
+</div>
+    <hr>
+
+    <div class="container-fluid footer">
+
+
+        <h1 style="margin-top: 10px;"> Millions of photos tested</h1>
+        <div class="row logo">
+
+            <div class="col-md-3">
+
+                <img style="margin: 0;" src="photo/logo.png" href="index.html" height="100px" width="100px"
+                    style="margin-left: 50%;">
+            </div>
+            <div class="col-md-3">
+
+                <ul> <h3>Account</h3></ul>
+                <li> <a href="#" style="color: aliceblue;">Sing Up</a></li>
+                <li> <a href="#"  style="color: aliceblue;" >Login</a></li>
+            </div>
+            <div class="col-md-3">
+                <ul><h3>Resources</h3></ul>
+                <li> <a href="#"  style="color: aliceblue;" >Home</a></li>
+                <li> <a href="#"  style="color: aliceblue;" >About</a></li>
+                <li> <a href="#"  style="color: aliceblue;" >Product</a></li>
+                <li> <a href="#"  style="color: aliceblue;" >term </a></li>
+
+            </div>
+            <div class="col-md-3" style="display: flex; flex-direction: row; justify-content: space-between;">
+                   <div class="button">
+                <button class="share"><i class="fa-brands fa-facebook-f" style="width: 15px; height: 15px;"></i>Share</button>
+                <button class="tweet"><i class="fa-brands fa-twitter"></i> Tweet</button>
+                <button class="post"><i class="fa-brands fa-linkedin"></i> post</button><br><br>
+
+                <p style="display: flex; justify-content:right;">Terms of Use </p>
+                  <p style="display: flex; justify-content:right;">  Privacy Policy</p>
+                  <p style="display: flex; justify-content:right;">© 2023 Photofeeler Inc.</p>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
